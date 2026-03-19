@@ -17,6 +17,9 @@ export default defineConfig({
   build: {
     target: 'esnext',
   },
+  ssr: {
+    noExternal: ['react-idle-timer'],
+  },
   // Keep them available via import.meta.env.NEXT_PUBLIC_*
   envPrefix: 'NEXT_PUBLIC_',
   optimizeDeps: {
