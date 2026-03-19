@@ -14,8 +14,11 @@ if (globalThis.fetch) {
   globalThis.fetch = updatedFetch;
 }
 
+import { existsSync } from 'node:fs';
+
 // Recursively find all route.js files
 async function findRouteFiles(dir: string): Promise<string[]> {
+  if (!existsSync(dir)) return [];
   const files = await readdir(dir);
   let routes: string[] = [];
 
