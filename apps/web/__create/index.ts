@@ -238,4 +238,11 @@ app.route(API_BASENAME, api);
 export default await createHonoServer({
   app,
   defaultLogger: false,
+  customNodeServer: {
+    createServer: () => {
+      // Return a dummy server object to prevent @hono/node-server from calling .listen()
+      // in Vercel Serverless environment.
+      return { listen: () => {} } as any;
+    }
+  }
 });

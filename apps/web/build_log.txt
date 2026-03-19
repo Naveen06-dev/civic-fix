@@ -117,3 +117,4 @@ assets/index-BjoMKCbk.js:805:
 ix\\apps\\web\\build\\server\
 \src\\app\\api'
 }
+[2m10:46:36 am[22m [36m[1m[vite][22m[39m changed tsconfig file detected: D:/Projects/CivicFix/apps/web/temp-template/tsconfig.json - Clearing cache and forcing full-reload to ensure TypeScript is compiled with updated config values.
